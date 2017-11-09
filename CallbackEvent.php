@@ -1,6 +1,6 @@
 <?php
 
-namespace omnilight\scheduling;
+namespace powerkernel\scheduling;
 use yii\base\Application;
 use yii\base\InvalidParamException;
 use yii\base\BaseObject;
