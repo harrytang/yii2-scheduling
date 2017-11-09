@@ -19,6 +19,10 @@ class ScheduleController extends Controller
      */
     public $scheduleFile;
 
+    /**
+     * @param string $actionID
+     * @return array
+     */
     public function options($actionID)
     {
         return array_merge(parent::options($actionID),

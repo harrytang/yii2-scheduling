@@ -1,9 +1,10 @@
 <?php
 
 namespace powerkernel\scheduling;
+
+use Yii;
 use yii\base\Application;
 use yii\base\InvalidParamException;
-use yii\base\BaseObject;
 
 
 /**
@@ -34,10 +35,11 @@ class CallbackEvent extends Event
         $this->callback = $callback;
         $this->parameters = $parameters;
 
-        BaseObject::__construct($config);
+        if (!empty($config)) {
+            Yii::configure($this, $config);
+        }
 
-        if ( ! is_string($this->callback) && ! is_callable($this->callback))
-        {
+        if (!is_string($this->callback) && !is_callable($this->callback)) {
             throw new InvalidParamException(
                 "Invalid scheduled callback event. Must be string or callable."
             );
@@ -56,6 +58,7 @@ class CallbackEvent extends Event
         parent::callAfterCallbacks($app);
         return $response;
     }
+
     /**
      * Get the summary of the event for display.
      *

@@ -57,6 +57,9 @@ class Schedule extends Component
         return $event;
     }
 
+    /**
+     * @return Event[]
+     */
     public function getEvents()
     {
         return $this->_events;
