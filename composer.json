@@ -25,10 +25,10 @@
   },
   "autoload": {
     "psr-4": {
-      "omnilight\\scheduling\\": ""
+      "powerkernel\\scheduling\\": ""
     }
   },
   "extra": {
-    "bootstrap": "omnilight\\scheduling\\Bootstrap"
+    "bootstrap": "powerkernel\\scheduling\\Bootstrap"
   }
 }
